@@ -120,3 +120,37 @@ Output:
 ![image014](https://user-images.githubusercontent.com/46487696/97301918-5b33cf00-187e-11eb-8a2f-242467d1271e.png)
 ![image016](https://user-images.githubusercontent.com/46487696/97301928-5ec75600-187e-11eb-9369-1f4a49efffd4.png)
 
+### Scala Nested if-else statement:
+
+When an if else statement is present inside the body of another “if” or “else” then this is called nested if else
+Syntax:
+```
+if(condition1){
+// If block statements to be executed
+if(condition2){
+// If block statements to be executed
+} else {
+// Else bock statements to be executed
+}
+} else {
+// Else bock statements to be executed
+}
+```
+Example:
+```
+var Resume:String = "selected"
+var interview:String = "not clear"
+if(Resume == "selected") {
+println("Welcome to Status Neo")
+  if(interview == "clear")
+println("congratulation,you are selected!")
+  else
+println("Sorry,not selected")
+} else
+println("Sorry,not selected")
+```
+Output:
+
+![image018](https://user-images.githubusercontent.com/46487696/97302453-1f4d3980-187f-11eb-8117-18dbb9a838b0.png)
+![image020](https://user-images.githubusercontent.com/46487696/97302460-2116fd00-187f-11eb-9bb4-1e30b582743a.png)
+
