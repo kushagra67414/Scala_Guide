@@ -14,5 +14,13 @@
 ## Day-3
 
 * Complete Guide on Scala
-  * Scala | Function
-  * Scala | OOPs Concept
+
+  * Scala Variables and data types
+    * Variables
+    * Data types
+  * Scala Conditional expressions
+    * If statement
+    * If-else statement
+    * If statement
+    * Nested if-else statement
+    * If-else-if ladder statement
