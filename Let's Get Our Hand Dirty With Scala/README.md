@@ -154,3 +154,45 @@ Output:
 ![image018](https://user-images.githubusercontent.com/46487696/97302453-1f4d3980-187f-11eb-8117-18dbb9a838b0.png)
 ![image020](https://user-images.githubusercontent.com/46487696/97302460-2116fd00-187f-11eb-9bb4-1e30b582743a.png)
 
+### Scala If-else-if ladder statement:
+
+Flowchart:
+
+![image022](https://user-images.githubusercontent.com/46487696/97302631-5885a980-187f-11eb-93c0-5559c9455ecc.png)
+
+Here if-else-if ladder executes one condition among the multiple conditional statements
+
+Syntax :
+```
+if (condition1){    
+//Code to be executed if condition1 is true    
+} else if (condition2){    
+//Code to be executed if condition2 is true    
+} else if (condition3){    
+//Code to be executed if condition3 is true    
+}    
+...    
+else {    
+//Code to be executed if all the conditions are false    
+}
+```
+Example :
+```
+var  resume:String ="selected not"
+if( resume == "selected" ){
+println("Welcome to Status Neo")
+} else if( resume == "not selected" ){
+println("Sorry, not selected")
+} else if( resume == "in process" ){
+println("waiting....")
+} else{
+println("This is else statement")
+}
+```
+
+Output :
+
+![image024](https://user-images.githubusercontent.com/46487696/97302875-a26e8f80-187f-11eb-8f06-e1c185d98a71.png)
+![image026](https://user-images.githubusercontent.com/46487696/97302879-a39fbc80-187f-11eb-965e-8f5e5cc40020.png)
+![image028](https://user-images.githubusercontent.com/46487696/97302894-a9959d80-187f-11eb-845d-4193bbca8e03.png)
+
