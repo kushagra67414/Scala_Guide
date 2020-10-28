@@ -323,3 +323,156 @@ Output:
 
 ![image042](https://user-images.githubusercontent.com/46487696/97479916-bb0ea080-1978-11eb-8ed8-f2d92b5d4e5c.jpg)
 
+## Scala Functions:
+* As already told Scala supports functional programming approach. This language also gives us a great set of built-in functions and not only this we can also create user defined functions.
+* In Scala, we can store function value, pass function as an argument and return function as a value from other function. 
+* def keyword is used to define a function, but we have to keep one thing in mind while defining a function Is that we must give a return type of parameters while defining function and return type of a function is optional.
+* Also, functions are a first-class value in Scala. ... It means that functions can be passed as arguments to other functions, and functions can return other functions
+
+Syntax:
+
+```
+def FunctionName(parameters : typeofparameters) : returntypeoffunction = {  
+// statements to be executed  
+}  
+```
+* we can create function with or without = (equal) operator. If we use it, function will return value. If we don't use it, our function will not return anything.
+
+### NON-PARAMETERIZED
+* Scala Function Example WITHOUT using = Operator
+
+Let's Try an Example =>
+
+```
+object functions {
+  def main(args: Array[String]) {
+WithouEqualTo()           // Calling function
+  }
+  def WithouEqualTo()  {        // Defining a function
+println("Scala Function Example without using = Operator")
+  }
+}
+```
+Output :
+
+![image044](https://user-images.githubusercontent.com/46487696/97480227-248eaf00-1979-11eb-83ba-05388dfd61f2.jpg)
+
+* Scala Function Example WITH using = Operator
+
+Let's Try an Example =>
+
+```
+object functions {
+  def main(args: Array[String]) {
+WithouEqualTo()           // Calling function
+  }
+  def WithouEqualTo()  {        // Defining a function
+println("Scala Function Example without using = Operator")
+  }
+}
+```
+OutPut:
+
+![image046](https://user-images.githubusercontent.com/46487696/97480368-4f790300-1979-11eb-8b98-b643b28641d6.jpg)
+
+### PARAMETERIZED
+* when using parameterized function we must mention type of parameters explicitly otherwise compiler throws an error and your code fails to compile.
+Let's Try an Example =>
+```
+object functions {
+  def main(args: Array[String]) {
+Parameterized("Status Neo")
+  }
+  def Parameterized(x:String): Unit = {
+val a = x
+println("Company name is: " +a)
+  }
+}
+```
+OutPut:
+
+![image048](https://user-images.githubusercontent.com/46487696/97480577-9cf57000-1979-11eb-8ce4-ba07f9f78712.jpg)
+
+### Scala Higher Order Functions:
+
+These are the functions that either takes a function as argument or returns a function. In simple language function which works with function are called higher order function. Using these functions, we can create function composition, lambda function or anonymous function etc.
+
+**Passing a Function as Parameter in a Function :**
+
+In this type of scenario, we pass a function in another function as a parameter you can see the example for better understanding
+
+Let's Try an Example =>
+```
+object HigherOrderFunction {
+  def main(args: Array[String]): Unit = {
+Statusneo("Status ", add)                   // Passing a function as parameter
+  }
+  def Statusneo(x:String, f:String=>String):Unit = {
+println(f(x))                                   // Calling that function
+  }
+  def add(x:String):String = {
+x+"Neo"
+  }
+}
+```
+Output:
+
+![image050](https://user-images.githubusercontent.com/46487696/97480788-e940b000-1979-11eb-81f7-9e7628b27438.jpg)
+
+### Function Composition:
+
+* This is a process of composing in which a function represents the application of two composed functions, lets understand it better with an example.
+
+Let's Try an Example =>
+
+```
+object HigherOrderFunction {
+  def main(args: Array[String]) = {
+    var output = multiplyBy100(sub5(15))      // Function composition
+println("Final result: "+output)
+  }
+  def sub5(x:Int):Int = {
+    x-5
+  }
+
+  def multiplyBy100(x:Int):Int = {
+    x*100
+  }
+}
+```
+OutPut:
+
+![image052](https://user-images.githubusercontent.com/46487696/97480925-11c8aa00-197a-11eb-842e-4a2209a3c8e4.jpg)
+
+### Function Currying
+
+* Let’s suppose we have a function with multiple parameter list. But we called the function with fewer parameter lists, then it will yield a function taking the missing parameter lists as its arguments.
+* In simple terms it is a process of transforming a multiple argument taking function into single argument taking. 
+* Let’s understand it with an example
+
+Example:
+```
+object HigherOrderFunction {
+  def sum(x:Int)(y:Int):Int = {
+x+y
+  }
+  def main(args: Array[String]):Unit = {
+    //normal function
+    var output = sum(2)(3)
+println("sum of the numbers are: "+output)
+
+    // function currying
+    var add = sum(5)_  //Here, only the ‘_’ is added after the calling the function add for value of sum
+
+    var output1 = add(2)
+println("sum of the numbers are: "+output1)
+  }
+}
+```
+
+OutPut :
+
+![image054](https://user-images.githubusercontent.com/46487696/97481109-56544580-197a-11eb-9f42-3e4833ad90c3.jpg)
+
+
+
