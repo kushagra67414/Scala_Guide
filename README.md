@@ -24,3 +24,11 @@
     * If statement
     * Nested if-else statement
     * If-else-if ladder statement
+  * Scala Loops 
+    * While loop
+    * Do-While loop
+    * For loop
+  * Scala Function
+    * Parameterized
+    * Non parameterized
+    * Higher order functions
