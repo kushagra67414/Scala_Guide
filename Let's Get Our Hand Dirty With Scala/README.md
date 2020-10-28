@@ -196,3 +196,130 @@ Output :
 ![image026](https://user-images.githubusercontent.com/46487696/97302879-a39fbc80-187f-11eb-965e-8f5e5cc40020.png)
 ![image028](https://user-images.githubusercontent.com/46487696/97302894-a9959d80-187f-11eb-845d-4193bbca8e03.png)
 
+
+## SCALA - Loops:
+
+* There basically three types of loops which include
+  * While loop
+  * Do-While loop
+  * For loop
+
+### While-Loops =>
+
+This loop is used to iterate code till the specified condition is true. It iterates again and again. You can use while loop if you don't know number of iterations prior.
+
+**Flowchart:**
+
+![image030](https://user-images.githubusercontent.com/46487696/97478924-a54cab80-1977-11eb-8dfd-a598d7372b4c.jpg)
+
+Syntax :
+```
+While(Condition){ 
+ // Statements to be executed  
+} 
+```
+Example:
+
+```
+object loops {
+  def main(args: Array[String]) {
+    var a = 2;                       // Initialization
+println("Table of 2")
+    while( a<=20 ){                // Condition
+println("Status Neo: "+a)
+      a = a+2                        // Incrementation
+    }
+  }
+}
+```
+
+Output:
+
+![image032](https://user-images.githubusercontent.com/46487696/97479028-c8775b00-1977-11eb-8e8a-5954e3f776e2.png)
+
+### Scala Do-while loop
+
+This loop is similar to a while loop, except that it is confirmed to execute at least one time, because do...while loop checks its condition at the bottom of the loop.
+
+Flowchart:
+
+![image034](https://user-images.githubusercontent.com/46487696/97479127-e644c000-1977-11eb-9725-d5a2d4058c0c.jpg)
+
+Syntax :
+```
+Do { 
+ // Statements to be executed  
+}
+While(Condition)
+```
+
+Let's Try an Example =>
+
+```
+object loops {
+  def main(args: Array[String]) {
+    var a = 2;                       // Initialization
+    do{
+println("Status Neo: "+a)  //statement
+      a = a+2
+    }
+    while( a<=20 )             // Condition
+println("table of 2")
+  }
+}
+```
+
+Output :
+
+![image036](https://user-images.githubusercontent.com/46487696/97479376-2a37c500-1978-11eb-9ffa-a14823d95011.png)
+
+### Scala For-loop
+
+This for loop is known as for-comprehensions. It is used to iterate, filter and return an iterated collection.
+
+Syntax :
+```
+for ( i <- range){  
+// statements to be executed  
+} 
+```
+
+* We can implement for loop in Scala in many ways like using until keyword, to keyword, yield keyword, by keyword. We can also use it to filter our dataor to iterate in collections.
+
+### Scala for -loop using until keyword
+
+Let's Try an Example =>
+
+object loops {
+  def main(args: Array[String]) {
+    for( x <- 0 until 5){
+println("Value of X: "+x)
+    }
+  }
+}
+
+Output:
+
+![image038](https://user-images.githubusercontent.com/46487696/97479576-64a16200-1978-11eb-8e59-42a6b17daf7c.png)
+
+### Scala for-loop using yield keyword:
+
+In this case we have used yield keyword this keyword returns a result after it completes the full loop of iterations. The for-loopuse buffer internally to store iterated result and when all iterations are completed it yields the final result from that buffer. It is slightly different from other loops
+
+Let's Try an Example =>
+```
+object loops {
+  def main(args: Array[String]) {
+println("table of 5:")
+    var output = for( x <- 5 to 50 if x%5==0) yield x
+    for(y<-output){
+println(y)
+    }
+  }
+}
+```
+
+Output:
+
+![image042](https://user-images.githubusercontent.com/46487696/97479916-bb0ea080-1978-11eb-8ed8-f2d92b5d4e5c.jpg)
+
