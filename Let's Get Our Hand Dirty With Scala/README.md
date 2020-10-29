@@ -632,4 +632,43 @@ Output :
 ![image062](https://user-images.githubusercontent.com/46487696/97594348-996cf200-1a28-11eb-84a2-8baaecd1d190.png)
 
 
+### Scala Companion Object:
+
+* In a Scala program, Scala class and Singleton object name are the same it is called a Companion Object. The object must be required to call the method inside the Companion object.
+
+Example :
+```
+object Mainobject{
+  def main(args:Array[String]){
+    Mainobject1.LetsDo() // no object required
+
+    Mainobject2.LetsDo()
+val o = new Mainobject2()
+o.LetsDo();
+    new Mainobject2().LetsDo()
+  }
+}
+
+
+object Mainobject1{
+  def LetsDo(){
+println("OH! you just create a Singleton Object")
+  }
+}
+object Mainobject2{
+  def LetsDo(){
+println("OH! you just create a Singleton Object")
+  }
+}
+
+class Mainobject2{
+  def LetsDo(){
+println("OH! you just create a Singleton Object")
+  }
+}
+```
+
+Output:
+
+![image064](https://user-images.githubusercontent.com/46487696/97595001-42b3e800-1a29-11eb-99f4-4ed9b8207c53.png)
 
