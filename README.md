@@ -32,3 +32,8 @@
     * Parameterized
     * Non parameterized
     * Higher order functions
+  * Scala OOPS concept
+    * Object and Classes
+    * Singleton and Companion Object 
+    * Constructors
+
