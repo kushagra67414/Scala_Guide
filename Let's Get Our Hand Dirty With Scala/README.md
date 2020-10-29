@@ -525,7 +525,7 @@ Output :
 ![image056](https://user-images.githubusercontent.com/46487696/97593488-c076f400-1a27-11eb-84f0-4dba2ea2feeb.png)
 
 
-### Class Extending  and Overriding
+### Class Extending and Overriding
 
 * Like java, Scala can inherit another class too with two restrictions. In the case of method overriding, we required the ‘override’ keyword and the Primary constructor is the only constructor that can pass the arguments to the base constructor. Scala does not allow multiple inheritances.
 
@@ -572,3 +572,12 @@ bike.gearcheck(5);
   }
 } 
 ```
+
+```
+Note: In this program, a copy of all methods and fields of the parent class acquire memory in this object when the object of a sportscar(derived class) is created.
+```
+
+Output :
+
+![image059](https://user-images.githubusercontent.com/46487696/97593934-29f70280-1a28-11eb-8f4b-babf20b20161.png)
+
