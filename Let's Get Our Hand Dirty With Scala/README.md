@@ -475,4 +475,100 @@ OutPut :
 ![image054](https://user-images.githubusercontent.com/46487696/97481109-56544580-197a-11eb-9f42-3e4833ad90c3.jpg)
 
 
+## Scala OOPS Concept:
 
+### Scala- Object and Classes
+
+* An object is a real-world entity. It is also known as a runtime entity. An object can be created using a new keyword. A class is a blueprint for objects. Once the class is defined, can create objects to access all functionalities of the defined class. It is public by default. Class variables are known as fields.
+
+Example :
+```
+class Employee{
+  var id: Int = 0;                         // fields 
+  var name: String = null;
+}
+object MainObject{
+  def main(args:Array[String]){
+    var e = new Employee()               //  object   
+println(e.name);
+  }
+}  
+```
+
+Output :
+
+![image055](https://user-images.githubusercontent.com/46487696/97593299-8efe2880-1a27-11eb-8467-849826b2c91a.png)
+
+* A constructor with arguments is known as a primary constructor. Let's see an example of passing the values to the constructor.
+
+Example:
+```
+class My_class (no: Int, Name: String){  // Primary Constructor
+
+def display() {     // Class methiod
+println(no +" "+ Name)
+
+	}
+}
+
+object MainObject{
+def main(args:Array[String]){
+
+ var m = new My_class(116 , "Kushagra")    // Constructor values
+m.display()
+
+  }
+}
+```
+Output :
+
+![image056](https://user-images.githubusercontent.com/46487696/97593488-c076f400-1a27-11eb-84f0-4dba2ea2feeb.png)
+
+
+### Class Extending  and Overriding
+
+* Like java, Scala can inherit another class too with two restrictions. In the case of method overriding, we required the ‘override’ keyword and the Primary constructor is the only constructor that can pass the arguments to the base constructor. Scala does not allow multiple inheritances.
+
+Example :
+```
+class cars (valgearVal:Int, valspeedVal: Int)
+{
+  var gear: Int = gearVal	// field
+  var speed: Int = speedVal   // field
+
+  def gearcheck(dec: Int)	// method
+  {
+gear = gear - dec
+println("gear efficiency will be: " + gear);
+  }
+  def range(inc: Int)
+  {
+speed = speed + inc;
+println("new speed range is : " + speed);
+  }
+}
+class sportscar(override valgearVal: Int,
+                   override valspeedVal: Int,
+valairbagsVal : Int)
+  extends cars(gearVal, speedVal)   // derived class
+
+{
+  var airbags: Int = airbagsVal
+
+  def addbags(newVal: Int)
+  {
+airbags = airbags + newVal
+println("new airbags available : " + airbags);
+  }
+}
+object MainObject
+{
+  def main(args: Array[String])
+  {
+val bike = new sportscar(10, 20, 15);
+bike.addbags(5);
+bike.range(100);
+bike.gearcheck(5);
+  }
+} 
+```
