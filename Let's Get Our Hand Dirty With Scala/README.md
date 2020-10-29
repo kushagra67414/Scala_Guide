@@ -581,3 +581,55 @@ Output :
 
 ![image059](https://user-images.githubusercontent.com/46487696/97593934-29f70280-1a28-11eb-8f4b-babf20b20161.png)
 
+### Anonymous object:
+
+* An object without any reference name is known as an Anonymous object. It makes code shorter and more understandable. It’s good when you would prefer not to reuse it further.
+
+Example :
+```
+class Cal{
+  def add(x:Int, y:Int){
+    var add = x+y;
+println("result : " +add);
+  }
+}
+
+object MainObject{
+  def main(args:Array[String]){
+    new Cal().add(10,10);
+
+  }
+}  
+```
+
+Output:
+
+![image061](https://user-images.githubusercontent.com/46487696/97594097-54e15680-1a28-11eb-96d5-8abdee3534e5.png)
+
+### Scala Singleton Object
+
+Unlike java having static concept, Scala use Singleton object means no object is required , Methods can be call directly. Method inside this singleton Object can be access globally . As Earlier, we have seen Scala class extend means class inherited by another class. Here Singleton Object can also extend the class.
+
+Note: Scala is pure object-oriented programming than java. You cannot pass the parameters to any Singleton object. You can have Multiple Singleton object in a program.	
+
+Example :
+```
+object Mainobject{
+  def main(args:Array[String]){
+    Mainobject1.LetsDo()        // no object required
+  }
+}
+
+
+object Mainobject1{
+  def LetsDo(){
+println("OH! you just create a Singleton Object")
+  }
+}  
+```
+Output :
+
+![image062](https://user-images.githubusercontent.com/46487696/97594348-996cf200-1a28-11eb-84a2-8baaecd1d190.png)
+
+
+
