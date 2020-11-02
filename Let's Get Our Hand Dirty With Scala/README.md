@@ -672,3 +672,133 @@ Output:
 
 ![image064](https://user-images.githubusercontent.com/46487696/97595001-42b3e800-1a29-11eb-99f4-4ed9b8207c53.png)
 
+
+## This Keyword
+
+This operator invokes the Primary Constructor as well as can be used to refer to the instance variables.
+
+Example :
+```
+class Project(P_name: String  )
+{
+  // Using this keyword
+  def this(P_name:String, R_Team:String )
+    {
+      this (P_name)
+println("Project Title :  " + P_name +
+        "\nRole of team members are :  " + R_Team )
+    }
+}
+
+object MainObject
+{
+  def main(args: Array[String])
+  {
+      var p = new Project( "Scala Blog", "Developer evangelist")
+  }
+}
+```
+
+This operator invokes the Primary Constructor.
+
+Output :
+
+![image070](https://user-images.githubusercontent.com/46487696/97886722-f5988480-1d4e-11eb-9aba-21f3767de46b.png)
+
+Example-2 :
+```
+class Project
+{
+  var P_name: String = ""
+  var R_Team:String  = ""
+  // Using this keyword
+
+  def this(P_name:String, R_Team:String ) {
+    this()
+this.P_name= P_name        // Refering the variable
+this.R_Team= R_Team
+  }
+  def display()
+  {
+println("Project Title :  " + P_name+
+      "\nRole of team members are :  " + R_Team)
+  }
+}
+object MainObject
+{
+  def main(args: Array[String])
+  {
+    var p = new Project( "Scala Blog", "Developer evangelist")
+p.display()
+  }
+}
+```
+
+Output :
+
+![image071](https://user-images.githubusercontent.com/46487696/97886751-034e0a00-1d4f-11eb-988a-cdfb18377452.png)
+
+## Scala Method Overloading
+
+> It helps to define methods of the same name with a different number of parameters and data types to customize the code.
+But it only permits to define of the method of an identical name within a class. Here also we can change the type of the data type of the parameters.
+
+Example :
+```
+class Statusneo{
+  def add(name:String, age:Int){
+println(name + " " + age)
+  }
+  def add(name:String, age:Double, branch:String){
+
+println(name + " " + age + " " + branch)
+  }
+}
+object MainObject{
+  def main(args:Array[String]){
+    var a  = new Statusneo();
+a.add("sumyak",19);
+a.add("Kushagra",19,"CSE-DevOps");
+  }
+}
+```
+Output:
+
+![image072](https://user-images.githubusercontent.com/46487696/97886771-0cd77200-1d4f-11eb-8e17-b57ff39140ac.png)
+
+
+## Scala Method Overriding
+
+> The first method with both Val or var can override. Subclass always overrides the method of the superclass that’s the rule.
+
+> Second, the override keyword is used to override that method which also belongs to a superclass.
+
+> Third, if the method parameter data type is Val we can’t change it to var It will throw an error.
+
+Example:
+```
+class Statusneo{
+  def result(){
+println("Are you here for the interview")
+  }
+}
+
+class interview extends Statusneo{
+  override def result(){
+println("You are the part of this intern now ")
+  }
+}
+
+object MainObject{
+  def main(args:Array[String]){
+    var b = new interview()
+b.result()
+  }
+}
+```
+
+Output:
+
+![image073](https://user-images.githubusercontent.com/46487696/97886801-18c33400-1d4f-11eb-9453-ad712a80a9b4.png)
+
+
