@@ -802,3 +802,113 @@ Output:
 ![image073](https://user-images.githubusercontent.com/46487696/97886801-18c33400-1d4f-11eb-9453-ad712a80a9b4.png)
 
 
+## Scala Field Overriding:
+
+> This is The Best Thing in Scala, We can Override the field but which are immutable i.e type ‘Val’. Because Val Is only readable and we can override it to a particular class to customize our code. Here also ‘override’ annotation is required. 
+
+> In the field, as we cannot override mutable value but also we cant override an Immutable value to a mutable value. (Like Val to override var ). The system will throw an error.
+
+Example =>
+
+```
+class Statusneo{
+valrate:Int = 60
+}
+class Github extends Statusneo{
+
+  override valrate:Int = 100
+  def show(){
+println("Rank yourself in github : " + rate)
+  }
+}
+object MainObject{
+  def main(args:Array[String]){
+    var g = new Github()
+g.show()
+  }
+}
+```
+Output :
+
+![image074](https://user-images.githubusercontent.com/46487696/98266737-a81b5200-1fb0-11eb-8cfb-ca0e2841422a.png)
+
+## Scala Final :
+
+> It’s used to avoid a descent into the derived class of superclass members. The final keyword can be used by fields, Methods, and Classes.
+
+Syntax :
+* Final val s:Int 
+* Final  def show(){  }
+* Final class Class_name { }
+
+Example =>
+```
+class Statusneo{
+  final valrate:Int = 60
+}
+class Github extends Statusneo{
+
+  override valrate:Int = 100
+  def show(){
+println("Rank yourself in github : " + rate)
+  }
+}
+object MainObject{
+  def main(args:Array[String]){
+    var g = new Github()
+g.show()
+  }
+}
+```
+> Here this will throw an error as the final variable is inherited to sub-class Github. The same goes for Class Methods and Classes.
+
+Output :
+
+![image075](https://user-images.githubusercontent.com/46487696/98266951-ddc03b00-1fb0-11eb-81de-83a520754785.png)
+
+
+## Scala Inheritance :
+
+> Inheritance use the concept of reusability. A class can be extent (super class) to a sub class to use the features of the class. A child class or sub class can have only one super class. “extends” keyword is used to inherit the class.
+
+Types of inheritance =>
+
+* Single Inheritance				* Multilevel Inheritance
+* Hierarchical Inheritance 			* Hybrid Inheritance
+* Multiple Inheritance	
+
+> Multiple & Hybrid Inheritance are not allowed in scala as only one class can be extend to the child class at a time. Though, can be achieve by Traits which have been explained in Scala-trait
+
+Let’s try an Example =>
+
+```
+ class Stausneo
+{
+    var Name: String = "You are Kushagra."
+}
+class Introduction extends Stausneo
+{
+    var intro: String = "Tell me about yourself not the CV which i have already gone through"
+}
+
+class LetsStart extends Introduction
+{
+    def Display(){
+        print("Okay then lets start Mr ")
+        println(Name)
+        print(intro)
+    }
+}
+object MainObject
+{
+    def main(args: Array[String])
+    {
+        val S = new LetsStart();
+        S.Display();
+    }
+}
+```
+Output :
+
+![image077](https://user-images.githubusercontent.com/46487696/98267291-38599700-1fb1-11eb-8fe0-7e23f23e309c.png)
+
