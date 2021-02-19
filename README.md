@@ -43,3 +43,19 @@
     * Final
     * Inheritance
 
+
+## Day-4
+
+ * Scala Abstract class and trait
+   * Abstract Class
+   * Trait
+ * Scala Access Modifiers
+   * Access Modifiers
+ * Scala Array
+   * Array
+   * Multidimensional Array
+ * Scala String 
+   * String
+   * Strings Methods
+  
+ 
