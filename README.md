@@ -78,3 +78,5 @@
    * List
    * Queue
    * Maps 
+ 
+[Click Here For Notes](https://github.com/kushagra67414/Scala_Guide/blob/master/Let's%20Get%20Our%20Hand%20Dirty%20With%20Scala/Day-5%20Notes-converted.pdf)
