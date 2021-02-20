@@ -59,3 +59,22 @@
    * Strings Methods
   
  [Click here for Notes](https://github.com/kushagra67414/Scala_Guide/blob/master/Let's%20Get%20Our%20Hand%20Dirty%20With%20Scala/Day-4%20Notes-converted.pdf)
+ 
+ 
+ 
+ ## Day-5
+ 
+ * Scala Exceptional Handling
+   * Exception Handling
+   * Try-Catch Block
+   * Finally Block
+   * Throw Keyword
+   * Throws Keyword
+ * Scala Collections
+   * Collections
+   * Set
+   * Seq
+   * Vector
+   * List
+   * Queue
+   * Maps 
